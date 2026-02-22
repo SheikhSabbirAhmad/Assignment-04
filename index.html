@@ -16,8 +16,43 @@
         }
     </style>
 </head>
-<body>
-    <h2>Font setup</h2>
+<body class="bg-[#F8FAFC] w-[80%] mx-auto">
+    <header>
+        <h1 class="text-[32px] font-bold text-[#002C5C] mt-8">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-8 mt-5">
+            <div class="bg-[#FFFFFF] p-4 rounded-lg">
+                <p class="text-[14px] font-semibold text-[#323B49]">Total</p>
+                <p id="total" class="text-[20px] font-bold text-[#002C5C]">0</p>
+            </div>
+            <div class="bg-[#FFFFFF] p-4 rounded-lg">
+                <p class="text-[14px] font-semibold text-[#323B49]">Interview</p>
+                <p id="interviewCount" class="text-[20px] font-bold text-[#10B981]">0</p>
+            </div>
+            <div class="bg-[#FFFFFF] p-4 rounded-lg">
+                <p class="text-[14px] font-semibold text-[#323B49]">Rejected</p>
+                <p id="rejectedCount" class="text-[20px] font-bold text-[#EF4444]">0</p>
+            </div>
+        </div>
+        <hr class="text-[#E6E7E9] m-5">
+    </header>
+
+    <main>
+        <section class="flex justify-between">
+            <div>
+                <h2 class="text-[20px] font-bold text-[#002C5C] mb-5">Available Jobs</h2>
+
+                <div>
+                    <button id="all-filter-btn" class="text-[12px] font-semibold text-white bg-[#3B82F6] px-10 py-2 rounded-md">All</button>
+                    <button id="interview-filter-btn" class="text-[12px] font-semibold text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-md">Interview</button>
+                    <button id="rejected-filter-btn" class="text-[12px] font-semibold text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-md">Rejected</button>
+                </div>
+            </div>
+            <div>
+                <p>8 jobs</p>
+            </div>
+        </section>
+    </main>
+
     <script src="./Scripts/script.js"></script>
 </body>
 </html>
