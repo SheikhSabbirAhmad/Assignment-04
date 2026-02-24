@@ -71,7 +71,7 @@ function toggleStyle(id){
     }
 }
 
-// step---2
+
 
 mainContainer.addEventListener('click', function (event){
 
@@ -247,7 +247,7 @@ function renderEmptyState() {
 
     div.innerHTML = `
         <img src="./assets/jobs.png" class="mx-auto w-20 opacity-80" />
-        <h2 class="text-[24px] font-bold text-[#002C5C]">No jobs available</h2>
+        <h2 class="text-[24px] font-bold text-[#002C5C]">No Jobs Available</h2>
         <p class="text-[#64748B]">Check back soon for new job opportunities</p>
     `;
 
