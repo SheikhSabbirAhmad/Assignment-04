@@ -19,7 +19,7 @@
     </style>
 </head>
 <body class="bg-[#F8FAFC] w-[80%] mx-auto">
-    <header>
+    <header class="sticky top-0 bg-[#F8FAFC] z-10">
         <h1 class="text-[32px] font-bold text-[#002C5C] mt-8">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-8 mt-5">
             <div class="bg-[#FFFFFF] p-4 rounded-lg">
@@ -39,11 +39,11 @@
     </header>
 
     <main>
-        <section class="flex justify-between">
+        <section class="flex justify-between sticky top-43 bg-[#F8FAFC] z-10">
             <div>
                 <h2 class="text-[20px] font-bold text-[#002C5C] mb-5">Available Jobs</h2>
 
-                <div class="flex gap-2">
+                <div class="flex gap-2 mb-8">
                     <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="text-[12px] font-semibold text-white bg-[#3B82F6] px-10 py-2 rounded-md">All</button>
                     <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="text-[12px] font-semibold text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-md">Interview</button>
                     <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="text-[12px] font-semibold text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-md">Rejected</button>
@@ -60,7 +60,7 @@
 
         </section>
 
-        <section id="allCards" class="mt-8 mb-8 space-y-6">
+        <section id="allCards" class="mb-8 space-y-6">
             
             <!-- card 1 -->
              <div class="card flex justify-between bg-[#FFFFFF] rounded-md p-5">

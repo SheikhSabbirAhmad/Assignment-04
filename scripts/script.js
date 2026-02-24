@@ -1,6 +1,6 @@
 let interviewList = [];
 let rejectedList = [];
-let currentStatus = 'all'
+let currentStatus = 'all-filter-btn';
 
 let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount');
@@ -17,11 +17,24 @@ const mainContainer = document.querySelector('main');
 const filterSection = document.getElementById('filtered-section');
 
 
-function calculateCount(){
-    total.innerText = allCards.children.length;
-    totalJobs.innerText = allCards.children.length;
+function calculateCount() {
+    const jobCards = allCards.querySelectorAll('.card');
+    const totalCards = jobCards.length;
+
+    total.innerText = totalCards;
+    totalJobs.innerText = totalCards;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
+
+    const existingEmpty = document.getElementById('empty-state');
+
+    if (totalCards === 0 && currentStatus === 'all-filter-btn') {
+        if (!existingEmpty) {
+            allCards.appendChild(renderEmptyState());
+        }
+    } else {
+        if (existingEmpty) existingEmpty.remove();
+    }
 }
 
 calculateCount();
@@ -148,6 +161,11 @@ mainContainer.addEventListener('click', function (event){
 function renderInterview (){
     filterSection.innerHTML = '' ;
 
+    if (interviewList.length === 0) {
+        filterSection.appendChild(renderEmptyState());
+        return;
+    }
+
     for(let interview of interviewList){
         console.log(interview);
 
@@ -184,6 +202,11 @@ function renderInterview (){
 function renderRejected(){
     filterSection.innerHTML = ''
 
+    if (rejectedList.length === 0) {
+        filterSection.appendChild(renderEmptyState());
+        return;
+    }
+
     for(let rejected of rejectedList){
         console.log(rejected);
 
@@ -215,4 +238,18 @@ function renderRejected(){
         `
         filterSection.appendChild(div);
     }
+}
+
+function renderEmptyState() {
+    const div = document.createElement('div');
+    div.id = 'empty-state';
+    div.className = 'bg-[#FFFFFF] rounded-xl p-20 text-center space-y-5 shadow-sm mt-2';
+
+    div.innerHTML = `
+        <img src="./assets/jobs.png" class="mx-auto w-20 opacity-80" />
+        <h2 class="text-[24px] font-bold text-[#002C5C]">No jobs available</h2>
+        <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+    `;
+
+    return div;
 }
