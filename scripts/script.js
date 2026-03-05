@@ -186,13 +186,13 @@ function renderInterview (){
                       </div>
                       <!-- part--3 -->
                        <div class="flex gap-3 mt-5 mb-2">
-                        <button class="interview-btn text-[16px] font-bold px-4 py-2 text-[#10B981] border-2 border-green-500 rounded-md bg-transparent">INTERVIEW</button>
-                        <button class="rejected-btn text-[16px] font-bold px-4 py-2 text-[#EF4444] border-2 border-red-500 rounded-md bg-transparent">REJECTED</button>
+                        <button class="interview-btn text-[16px] font-bold px-4 py-2 text-[#10B981] border-2 border-green-500 rounded-md bg-transparent cursor-pointer hover:bg-green-200">INTERVIEW</button>
+                        <button class="rejected-btn text-[16px] font-bold px-4 py-2 text-[#EF4444] border-2 border-red-500 rounded-md bg-transparent cursor-pointer hover:bg-rose-200">REJECTED</button>
                        </div>
                  </div>
                  <!-- main part--2 -->
                   <div>
-                    <button class="btn-delete bg-[#F8FAFC] p-2 rounded-full"><i class="fa-regular fa-trash-can"></i></button>
+                    <button class="btn-delete bg-[#F8FAFC] p-2 rounded-full cursor-pointer hover:bg-red-400"><i class="fa-regular fa-trash-can"></i></button>
                   </div>
         `
         filterSection.appendChild(div);
@@ -227,13 +227,13 @@ function renderRejected(){
                       </div>
                       <!-- part--3 -->
                        <div class="flex gap-3 mt-5 mb-2">
-                        <button class="interview-btn text-[16px] font-bold px-4 py-2 text-[#10B981] border-2 border-green-500 rounded-md bg-transparent">INTERVIEW</button>
-                        <button class="rejected-btn text-[16px] font-bold px-4 py-2 text-[#EF4444] border-2 border-red-500 rounded-md bg-transparent">REJECTED</button>
+                        <button class="interview-btn text-[16px] font-bold px-4 py-2 text-[#10B981] border-2 border-green-500 rounded-md bg-transparent cursor-pointer hover:bg-green-200">INTERVIEW</button>
+                        <button class="rejected-btn text-[16px] font-bold px-4 py-2 text-[#EF4444] border-2 border-red-500 rounded-md bg-transparent cursor-pointer hover:bg-rose-200">REJECTED</button>
                        </div>
                  </div>
                  <!-- main part--2 -->
                   <div>
-                    <button class="btn-delete bg-[#F8FAFC] p-2 rounded-full"><i class="fa-regular fa-trash-can"></i></button>
+                    <button class="btn-delete bg-[#F8FAFC] p-2 rounded-full cursor-pointer hover:bg-red-400"><i class="fa-regular fa-trash-can"></i></button>
                   </div>
         `
         filterSection.appendChild(div);
